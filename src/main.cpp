@@ -10,11 +10,12 @@
  **************************************************************/
 
 // Your GPRS credentials (leave empty, if missing)
-const char apn[] = "internet"; // DIGI APN
+//const char apn[] = "internet"; // DIGI APN
 //const char apn[]      = "online"; // Telenor APN
-const char gprsUser[] = ""; // User
-const char gprsPass[] = ""; // Password
-const char simPIN[] = "";   // SIM card PIN code, if any
+const char apn[] = "internet.vodafone.net"; // Vodafone APN
+const char gprsUser[] = "";                 // User
+const char gprsPass[] = "";                 // Password
+const char simPIN[] = "3933";               // SIM card PIN code, if any
 
 // TTGO T-Call pin definitions
 #define MODEM_RST 5
@@ -37,8 +38,8 @@ const char simPIN[] = "";   // SIM card PIN code, if any
 #define TINY_GSM_RX_BUFFER 1024 // Set RX buffer to 1Kb
 
 // Define the serial console for debug prints, if needed
-//#define TINY_GSM_DEBUG SerialMon
-//#define DUMP_AT_COMMANDS
+#define TINY_GSM_DEBUG SerialMon
+#define DUMP_AT_COMMANDS
 
 #include <Wire.h>
 #include <TinyGsmClient.h>
